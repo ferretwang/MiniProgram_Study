@@ -1,2 +1,17 @@
 <!--pages/about/about.wxml-->
-<text>这里是关于页面的内容</text>
+<!-- 1.text基本使用 -->
+<text>Hello World \n</text>
+
+<!-- 2.selectable:true -->
+<!-- 默认情况下text的文本长按是不能选中的 -->
+<text selectable="true">这里的文本可以长按选中</text>
+
+<!-- 1.button的基本使用 -->
+<button>按钮</button>
+
+<!-- 2.size属性:mini -->
+<button size="mini">按钮</button>
+
+<!-- 2.type属性 -->
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
