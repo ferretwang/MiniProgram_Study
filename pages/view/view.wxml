@@ -1,0 +1,17 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view 的基本使用 -->
+<view class="box">哈哈哈</view>
+<view>呵呵呵</view>
+
+<!-- 2.hhover-class:长按的效果 -->
+<view class="box1" hover-class="hover-view"> box1</view>
+
+<!-- 3.hover-stop-propagation:阻止祖先点击态 -->
+<view class="box2" hover-class="hover-box2">
+  <view class="box1" 
+        hover-class="hover-view"
+        hover-stop-propagation
+        >
+    box1
+  </view>
+</view>
