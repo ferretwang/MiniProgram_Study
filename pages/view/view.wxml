@@ -11,7 +11,7 @@
   <view class="box1" 
         hover-class="hover-view"
         hover-stop-propagation
-        >
+  >
     box1
   </view>
 </view>

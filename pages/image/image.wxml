@@ -1,0 +1,32 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image的基本使用 -->
+<!-- 
+重点:
+  1.可以单标签或者双标签
+  2.image默认有自己的大小:320x240px 
+  3.image组件是一个行内块级元素
+-->
+<!-- <image></image> -->
+
+<!-- 2.src:本地地址(相对/绝对路径)/远程地址 -->
+<image src="../../assets/timg.jpg"></image>
+<image src="/assets/timg.jpg"></image>
+<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568881030564&di=67fa14cffeb6d7b4089f13e504247650&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201510%2F29%2F20151029140701_LXET5.jpeg"></image>
+
+<!-- 补充:手机相册中的图片 -->
+<button bindtap="xiangce_pick">按钮</button>
+<image src="{{imagePath}}"></image>
+
+<!-- 3.bindLoad 和 lazyLoad -->
+<image 
+  wx:for="{{1}}"
+  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568883305534&di=491c367e2d6bb75cf1ce2bc0991d6d53&imgtype=0&src=http%3A%2F%2Fpic34.nipic.com%2F20131019%2F3347542_160452890000_2.jpg"
+  bindload="bindLoad_image"
+  lazy-load="{{true}}">
+</image>
+
+<!-- 4.show-menu-by-longpress:开启长按图片显示识别小程序码菜单 -->
+<image 
+  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568881030564&di=67fa14cffeb6d7b4089f13e504247650&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201510%2F29%2F20151029140701_LXET5.jpeg"
+  show-menu-by-longpress>
+</image>
