@@ -1,0 +1,22 @@
+/* pages/scroll/scorll.wxss */
+.scroll_view{
+  background: purple;
+  white-space: nowrap;
+}
+.item1{
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 10px;
+  display: inline-block;
+}
+.scroll_view2{
+  background: rgb(7, 158, 70);
+  height: 200px;
+  margin-top: 20px;
+}
+.item2{
+  height: 100px;
+  background: rgb(89, 0, 255);
+  margin: 10px;
+}

@@ -1,0 +1,17 @@
+<!-- 1.水平滚动 -->
+<scroll-view class="scroll_view" scroll-x>
+  <view wx:for= "{{10}}" class="item1">{{item}}</view>
+</scroll-view>
+<!-- 2.垂直滚动 -->
+<scroll-view class="scroll_view2" scroll-y>
+  <view wx:for= "{{10}}" class="item2">{{item}}</view>
+</scroll-view>
+
+<!-- 补充内容:监听滚动 -->
+<scroll-view 
+  class="scroll_view2" 
+  scroll-y
+  bindscroll="bind_scroll"
+  >
+  <view wx:for= "{{10}}" class="item2">{{item}}</view>
+</scroll-view>
