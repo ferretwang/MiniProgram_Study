@@ -1,0 +1,16 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 1.设置样式的三种方式 -->
+<!-- 1.1.行内样式 -->
+<view style="color:red; font-size:32px">哈哈</view>
+
+<!-- 1.2.页面样式 在当前文件wxss-->
+<view class="box1">呵呵</view>
+
+<!-- 1.3.全局样式 在app.wxss-->
+<view class="container">嘿嘿</view>
+
+<!-- 2.样式优先级:行内 > 页面 > 全局 -->
+
+<!-- 3.rpx单位,屏幕自适应 -->
+<view class="box">px为单位</view>
+<view class="box2">rpx为单位</view>
