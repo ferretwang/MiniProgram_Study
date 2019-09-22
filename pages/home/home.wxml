@@ -1,3 +1,10 @@
 <!--pages/home/home.wxml-->
+<!-- include的用法
+    1.include可以多层次导入
+    2.相当于把<templete/>标注的以外的代码全部copy过来当前位置，而import则是相反，它是只引用模板
+    3.import引用作用域是有限制的，引用页面只能使用被引用页面的模板，不能使用被引用页面中引用其它页面模板的模板
+ -->
+<include src="/pages/template/header.wxml"/>
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
+<include src="/pages/template/footer.wxml"/>

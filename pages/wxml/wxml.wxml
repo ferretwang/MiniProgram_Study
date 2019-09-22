@@ -1,0 +1,82 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- 1.标签要闭合,区分大小写 -->
+
+<!-- 2.mustache语法 -->
+<view>{{message}}</view>
+<view>我叫{{name}},今年{{age}}岁了!</view>
+<view>我是{{age>=18?"成年人":"未成年人"}}</view>
+<view>{{now_time}}</view>
+<button size="mini" bindtap="change_color">切换颜色</button>
+<view class="box {{isActive ? 'active':''}}">哈哈</view>
+
+<view>---条件判断--</view>
+<!-- wx:if的使用 -->
+<view wx:if="{{isShow}}">哈哈</view>
+<button bindtap="showOrNot">显示切换</button>
+
+<!-- wx:if-wx:elif -->
+<block wx:if="{{isShow}}">
+  <view>分数:{{score}}分</view>
+  <view wx:if="{{score>=90}}">成绩:优秀</view>
+  <view wx:elif="{{score>=80}}">成绩:良好</view>
+  <view wx:elif="{{score>=60}}">成绩:及格</view>
+  <view wx:else>成绩:不及格</view>
+  <button size="mini" bindtap="scoreIncrease">分数递增6</button>
+</block>
+<!-- hidden属性:
+wx:if:组件创建与否来决定显示与否
+hidden:组件已创建但控制显示与否
+如果显示和隐藏的频率较高,选用hidden方法
+ -->
+<block wx:if="{{isShow}}">
+  <view hidden="{{false}}">hidden属性为false</view>
+  <view wx:if="{{true}}">wx:if属性为true</view>
+</block>
+<view>-------列表渲染-------</view>
+<!-- 1.wx:for方法 -->
+<!-- 1.1.便利数组/字符串/数字 -->
+<block wx:if="{{isShow}}">
+  <view wx:for="{{['abc','呵呵']}}">{{item}} {{index}}</view>
+  <view wx:for="阿萨法规">{{item}} {{index}}</view>
+  <view wx:for="{{9}}">{{item}}</view> -->
+</block>
+<!-- <block></block>标签:对一组标签进行整体操作 ,本身不做渲染,只接受控制属性-->
+
+<!-- 3.给item/index 改名字 -->
+<!-- <view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">
+  {{movie}} {{i}}
+</view> -->
+<!-- 3.1.多层for循环遍历 -->
+<!-- <block wx:for="{{nums}}" wx:for-item="inner_nums">
+  <block wx:for="{{inner_nums}}">
+    <view>{{item}}</view>
+  </block>
+</block> -->
+
+<!-- 3.2.key作用 ,提高性能-->
+<view wx:for="{{nums}}" wx:key="{{item}}">{{item}}</view>
+
+<!-- template:模板的作用
+     1.不调用的时候不会创建
+     2.使得wxml里面的代码可以复用
+     3.使用is="模板名称"调用模板
+     4.使用data="{{key1:value1,key2:value2...}}"来接入数据生成模板
+     5.使用<import src="模板文件路径"/>来导入相应模板
+ -->
+<view>----------template:模板的作用----------</view>
+<template name="tmp1">
+  <button size="mini">{{btn}}</button>
+  <view>{{text}}</view>
+</template>
+<template is="tmp1" data="{{btn:'按钮1',text:'内容1'}}"></template>
+<template is="tmp1" data="{{btn:'按钮2',text:'内容2'}}"></template>
+
+<!-- 导入总结:
+  wxml的导入有两种方式:
+    import导入:
+      1.主要导入template
+      2.特点:不能进行递归导入
+    include引入:
+      1.将公共的wxml中的组件抽取到一个文件当中,相当于copy
+      2.特点:不能导入template/wxs,可以进行递归导入
+ -->
