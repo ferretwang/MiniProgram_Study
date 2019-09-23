@@ -1,0 +1,18 @@
+//js代码
+var message = "Hello World";
+var name = "wbw";
+var sum = function(num1, num2) {
+  return num1 + num2;
+}
+
+function price_format(price, num) {
+  var num = num || 2;
+  return price.toFixed(num);
+}
+//commonjs的模块化导出的写法
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum,
+  price_format: price_format
+}
