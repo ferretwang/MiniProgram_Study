@@ -1,4 +1,40 @@
 /* pages/home/home.wxss */
-.title{
-  color: red
+.box{
+  background: yellow ;
+  height: 300rpx;
+  width: 300rpx;
+}
+.outer{
+  background: green;
+  height: 400rpx;
+  width: 400rpx;
+  color: white;
+}
+.inner{
+  background: orange;
+  height: 200rpx;
+  width: 200rpx;
+  color: white;
+}
+.container{
+  display: flex;
+}
+.item{
+  flex: 1;
+  text-align: center;
+}
+.view1{
+  height: 600rpx;
+  width: 600rpx;
+  background: red;
+}
+.view2{
+  height: 400rpx;
+  width: 400rpx;
+  background: green;
+}
+.view3{
+  height: 200rpx;
+  width: 200rpx;
+  background: blue;
 }

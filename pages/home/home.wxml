@@ -1,3 +1,61 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
+<!-- 1.事件处理的回顾 -->
+<button bindtap="btn1" size="mini">按钮</button>
+<button bind:tap="btn1" size="mini">按钮</button>
+<button catch:tap="btn1" size="mini">按钮</button>
+
+<!-- 2.常见事件的回顾 -->
+<view class="box"
+      bindtouchstart="bind_touch_start"
+      bindtouchmove="bind_touch_move"
+      bindtouchend="bind_touch_end"
+      bindtap="bind_tap"
+      bindlongpress="bind_long_press"
+
+></view>
+
+<!-- 3.事件对象的分析 -->
+<button size="mini" bindtap="btn2">事件对象</button>
+
+<view class="outer" bindtap="outer" id="outer">
+  外层的view
+  <view class="inner" bindtap="inner" id="inner">
+    内层的view
+  </view>
+</view>
+
+<!-- 4.事件的参数传递 -->
+<!-- <view>{{title}}</view> -->
+<view class="container">
+  <block wx:for="{{title}}" wx:key="{{index}}">
+    <view class="item" 
+          bindtap="item_tap"
+          data-index="{{index}}"
+          data-item="{{item}}">
+          {{item}}
+    </view>
+  </block>
+</view>
+
+<!-- 5.事件冒泡和事件捕获 -->
+<!-- bind:一层层传递
+     catch:阻止事件的进一步传递
+ -->
+<view class="view1" 
+      capture-bind:tap="bindtap_c1"
+      bindtap="bindtap_v1">
+      c1
+      b1    
+  <view class="view2" 
+        capture-bind:tap="bindtap_c2"
+        catchtap="bindtap_v2">
+        c2
+        b2
+    <view class="view3" 
+          capture-bind:tap="bindtap_c3"
+          bindtap="bindtap_v3">
+          c3
+          b3
+    </view>
+  </view>
+</view>

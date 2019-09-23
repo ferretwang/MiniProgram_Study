@@ -1,66 +1,59 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    title: ["衣服", "帽子", "鞋子"]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  btn1() {
+    console.log("点击按钮1");
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  bind_touch_start() {
+    console.log("bind_touch_start");
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  bind_touch_move() {
+    console.log("bind_touch_move");
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  bind_touch_end() {
+    console.log("bind_touch_end");
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  bind_tap() {
+    console.log("bind_tap");
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  bind_long_press() {
+    console.log("bind_long_press");
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  btn2(event) {
+    console.log("事件对象", event);
   },
+  inner(event) {
+    console.log("inner发生点击", event);
+  },
+  outer(event) {
+    console.log("outer发生点击", event);
+  },
+  item_tap(event) {
+    const dataset = event.currentTarget.dataset;
+    const title = dataset.item;
+    const index = dataset.index;
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    console.log(title, index);
+  },
+  //-----事件冒泡和事件捕获---------
+  bindtap_c1(event) {
+    console.log("c1");
+  },
+  bindtap_v1(event) {
+    console.log("b1");
+  },
+  bindtap_c2(event) {
+    console.log("c2");
+  },
+  bindtap_v2(event) {
+    console.log("b2");
+  },
+  bindtap_c3(event) {
+    console.log("c3");
+  },
+  bindtap_v3(event) {
+    console.log("b3");
   }
 })
