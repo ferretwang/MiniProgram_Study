@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "cpn_style":"/components/cpn_style/cpn_style",
+    "cpn_01": "/components/cpn_01/cpn_01",
+    "cpn_prop": "/components/cpn_prop/cpn_prop",
+    "cpn-event": "/components/cpn-event/cpn-event",
+    "cpn_tapbar": "/components/cpn_tapbar/cpn_tapbar"
+
+  }
 }

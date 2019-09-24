@@ -1,0 +1,3 @@
+<!--components/cpn_prop/cpn_prop.wxml-->
+<view class="tilte">{{title}}</view>
+<view class="content">{{content}}</view>

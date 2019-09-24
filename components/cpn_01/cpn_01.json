@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cpn_02": "/components/cpn_02/cpn_02"
+  }
+}

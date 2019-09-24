@@ -1,0 +1,10 @@
+<!--components/cpn_tapbar/cpn_tapbar.wxml-->
+<view class="outer">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="inner1 {{currentIndex == index ? 'active' : ''}}"
+          bind:tap ="innerTap"
+          data-index="{{index}}">
+      <text>{{item}}</text>
+    </view>
+  </block>
+</view>

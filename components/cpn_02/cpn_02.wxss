@@ -1,0 +1,4 @@
+/* components/cpn_02/cpn_02.wxss */
+.cpn_02{
+  background: yellow;
+}

@@ -1,3 +1,35 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
+<text class="title titleClass">hello world</text>
 <button size="mini">按钮</button>
+
+<!-- 1.使用自定义组件 -->
+<!-- <cpn_01></cpn_01>
+<cpn_01></cpn_01>
+<cpn_01></cpn_01> -->
+
+<!-- 2.注意事项:
+      2.1字母只能小写,符号只能用 "-" 和 "_"
+      2.2不能以 "wx-" 为前缀
+      2.3自定义组件可以引用自定义组件
+      2.4如果在app.json中引用自定义组件,则所有页面皆可以使用该组件
+      
+ -->
+ <!-- 3.自定义组件的样式 
+        3.1.页面样式和自定义组件样式之间默认是隔离的,不会相互影响
+        3.2.如果需要 页面样式影响自定义组件样式,需要在组件的js文件中添加修改options:{styleIsolation:"apply-shared"}
+        3.3.如果需要 自定义组件影响样式页面样式,需要在组件的js文件中添加修改options:{styleIsolation:"shared"}
+ -->
+ <!-- <cpn_style></cpn_style> -->
+
+ <!-- 4.页面和组件之间传递数据/样式 -->
+ <!-- <cpn_prop title="呵呵" titleClass="red"> </cpn_prop>
+ <cpn_prop title="嘿嘿" titleClass="yellow"></cpn_prop>
+ <cpn_prop titleClass="blue"></cpn_prop> -->
+
+ <!-- 5.组件内部发出事件 -->
+ <!-- <view>当前计数:{{counter}}</view>
+ <cpn-event bind:cpn_btn_counter="cpn_btn_counter"/> -->
+
+<!-- 6.tapbar练习 -->
+<cpn_tapbar titles="{{['衣服','鞋子','帽子']}}"
+            bind:cpn_innerClick="cpn_innerClick"/>

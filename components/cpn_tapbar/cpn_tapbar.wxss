@@ -1,0 +1,17 @@
+/* components/cpn_tapbar/cpn_tapbar.wxss */
+.outer{
+  line-height: 88rpx;
+  height: 88rpx;
+  /* background: orange; */
+  display: flex;
+}
+.inner1{
+  flex: 1;
+  text-align: center;
+}
+
+.active text{
+  color: red;
+  border-bottom: 6rpx solid red;
+  padding: 20rpx 20rpx;
+}
