@@ -1,0 +1,6 @@
+<!--components/cpn_slot/cpn_slot.wxml-->
+<view>
+  <view>我是头部</view>
+  <slot/>
+  <view>我是尾部</view>
+</view>

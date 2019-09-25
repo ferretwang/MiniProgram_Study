@@ -1,0 +1,2 @@
+<!--components/cpn_select/cpn_select.wxml-->
+<view>计数器:{{counter}}</view>

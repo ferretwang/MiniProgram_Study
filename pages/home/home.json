@@ -4,7 +4,10 @@
     "cpn_01": "/components/cpn_01/cpn_01",
     "cpn_prop": "/components/cpn_prop/cpn_prop",
     "cpn-event": "/components/cpn-event/cpn-event",
-    "cpn_tapbar": "/components/cpn_tapbar/cpn_tapbar"
+    "cpn_tapbar": "/components/cpn_tapbar/cpn_tapbar",
+    "cpn_select": "/components/cpn_select/cpn_select",
+    "cpn_slot": "/components/cpn_slot/cpn_slot",
+    "cpn_m_slot": "/components/cpn_m_slot/cpn_m_slot"
 
   }
 }

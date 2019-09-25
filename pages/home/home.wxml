@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
-<text class="title titleClass">hello world</text>
-<button size="mini">按钮</button>
+<!-- <text class="title titleClass">hello world</text>
+<button size="mini">按钮</button> -->
 
 <!-- 1.使用自定义组件 -->
 <!-- <cpn_01></cpn_01>
@@ -31,5 +31,35 @@
  <cpn-event bind:cpn_btn_counter="cpn_btn_counter"/> -->
 
 <!-- 6.tapbar练习 -->
-<cpn_tapbar titles="{{['衣服','鞋子','帽子']}}"
-            bind:cpn_innerClick="cpn_innerClick"/>
+<!-- <cpn_tapbar titles="{{['衣服','鞋子','帽子']}}"
+            bind:cpn_innerClick="cpn_innerClick"/> -->
+
+<!-- 7.直接选中组件修改数据/调用方法----slot -->
+
+<!-- <cpn_select id="cpn_select"></cpn_select>
+<button size="mini" bind:tap="data_rewrite">修改组件内的数据</button> -->
+
+<!-- 8.1.单插槽的用法 slot -->
+<!-- <cpn_slot>
+  <button size="mini">插槽_按钮</button>
+</cpn_slot>
+
+<cpn_slot>
+  <text>插槽_文本</text>
+</cpn_slot>
+
+<cpn_slot>
+  <image src="http://images-cn.ssl-images-amazon.com/images/G/28/foodchatu/B0047CE0EY.logo.jpg"></image>
+</cpn_slot> -->
+
+<!-- 8.2.多个插槽的使用 
+      注意事项:
+      1.给每一个插槽起一个名字
+      2.必须在Component对象中添加一个选项:options:{multipleSlots: true}
+-->
+
+<cpn_m_slot>
+  <button size="mini" slot="slot2">插槽_按钮</button>
+  <slider slot="slot1"></slider>
+  <text slot="slot3">哈哈</text>
+</cpn_m_slot>
