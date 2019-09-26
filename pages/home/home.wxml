@@ -1,3 +1,14 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
+
+<!-- 1.toast 弹窗-->
+ <button bind:tap="show_toast">弹窗_toast</button>
+
+
+
+<!-- 2.modal 弹窗 -->
+<button bind:tap="show_modal">弹窗_modal</button>
+
+<!-- 3.分享  -->
+<button open-type="share">分享</button>
